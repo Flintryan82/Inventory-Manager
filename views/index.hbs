@@ -1,0 +1,26 @@
+<main>
+  <h1>Products</h1>
+  <form action="/product" method="GET">
+    <input type="text" class="search" name="search" placeholder="Search...">
+
+    <input type="submit" value="search">
+  </form>
+  <div>
+    {{#each products}}
+    <div class="cube" action="/product" method="GET">
+      {{!-- <img class="cube" src="{{imageURL}}"> --}}
+      <p class="name">{{products.productName}}</p>
+      <p><span>Product Type</span>{{products.productType}}</p>
+      {{!-- <a class="btn" href="/details/{{_id}}">Details</a> --}}
+      <p><span>Quantity</span>{{products.quantity}}</p>
+    </div>
+    {{!-- {{else}}
+    <div class="cube">
+      <p class="name">NO PRODUCTS WERE FOUND</p>
+      <p>Click here to add ther first product</p>
+      <a class="btn" href="/create/product">New Product</a>
+    </div> --}}
+    {{/each}}
+  </div>
+
+</main>

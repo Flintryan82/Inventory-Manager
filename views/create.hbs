@@ -1,0 +1,68 @@
+<div id="form">
+
+  <div class="fish" id="fish"></div>
+  <div class="fish" id="fish2"></div>
+
+  <form id="waterform" action='/create/product' method="POST">
+
+    <div class="formgroup" id="product">
+      <label for="name">Product Name*</label>
+      <input type="text" id="productName" name="productName" />
+    </div>
+
+    <div class="formgroup" id="productDiv">
+      <label for="text">Product Type</label>
+      <input type="text" id="productType" name="productType" />
+    </div>
+
+    <div class="formgroup" id="amount">
+      <label for="text">Quantity</label>
+      <input type="number" id="quantity" name="quantity" />
+    </div>
+
+    <div class="formgroup" id="price">
+      <label for="text">Price</label>
+      <input type="regex" id="price" name="price" />
+    </div>
+
+    <div class="formgroup" id="vendor">
+      <label for="text">Vendor</label>
+      <input type="text" id="vendorName" name="vendor" />
+    </div>
+
+    <div class="formgroup" id="message-form">
+      <label for="message">Product Description</label>
+      <textarea id="message" name="description"></textarea>
+    </div>
+    <input type="submit" value="Create" />
+  </form>
+</div>
+
+<script>
+  let regex = /[0-9]+.[0-9]+/g;
+</script>
+
+
+{{!--
+<main>
+  <h1>Create Product</h1>
+  <div class="form">
+
+    <form action='/create/cube' method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <label for="name">Description</label>
+      <textarea id="name" name="description"></textarea>
+      <label for="image">ImageUrl</label>
+      <input type="text" id="image" name="imageURL">
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" name="quantity" min="1" max="99999">
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" min="0" max="10000000">
+
+      <input type="submit" value="Create">
+    </form>
+  </div>
+</main>
+
+--}}
