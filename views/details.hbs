@@ -1,12 +1,15 @@
 {{!-- THIS PAGE WILL BE USED FOR INDIVIDUAL PRODUCTS --}}
         <main>
-            <h1>{{name}}</h1>
+            <h1>{{productName}}</h1>
             {{!-- <img class="cube" src="{{imageURL}}"> --}}
             <div class="details">
+                <p><span>Quantity:</span>{{quantity}}</p>
+                <p><span>Price:</span>{{price}}</p>
+                <p><span>Vendor:</span>{{vendor}}</p>
+                <p><span>Type:</span>{{productType}}</p>
                 <p><span>Description:</span>{{description}}</p>
-                <p><span>Difficulty level:</span> {{difficulty}}</p>
                 <a class="btn" href="/">Back</a>
-            <a class="btn" href="/attach/type/{{_id}}">Attatch Accessory</a>
+            {{!-- <a class="btn" href="/attach/type/{{_id}}">Attatch Accessory</a> --}}
             </div>
             <h2>Accessories</h2>
             <div class="types">

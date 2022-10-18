@@ -8,7 +8,7 @@ module.exports = function(req,res){
     console.log(productId);
 
 
-Product.findById(productId).populate('types').lean().then((product)=>{
+Product.findById(productId).lean().then((product)=>{
        res.render("details.hbs",product); 
 });
 
