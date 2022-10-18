@@ -7,7 +7,7 @@ module.exports = function(req,res){
 Product.find({}).lean().then((allProducts)=>{
     console.log(allProducts);
     let context = {
-        product:[...allProducts],
+        products:[...allProducts],
     }; 
 
 res.render("index.hbs",context);

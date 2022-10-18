@@ -6,20 +6,25 @@
     <input type="submit" value="search">
   </form>
   <div>
-    {{#each products}}
-    <div class="cube" action="/product" method="GET">
+
+    {{#each products}} 
+      <div class="cube" action="/product" method="GET">
       {{!-- <img class="cube" src="{{imageURL}}"> --}}
-      <p class="name">{{products.productName}}</p>
-      <p><span>Product Type</span>{{products.productType}}</p>
+      <a href="/details/:{{_id}}"><p class="name">{{productName}}</p></a>
+      <p><span>Quantity</span> {{quantity}}</p>
+      <p><span>Product Price</span> {{price}}</p>
+      <p><span>Product Vendor</span> {{vendor}}</p>
+      <p><span>Product description</span> {{description}}</p>
+      <p><span>Product id</span> {{_id}}</p>
       {{!-- <a class="btn" href="/details/{{_id}}">Details</a> --}}
-      <p><span>Quantity</span>{{products.quantity}}</p>
+
     </div>
-    {{!-- {{else}}
+    {{else}}
     <div class="cube">
       <p class="name">NO PRODUCTS WERE FOUND</p>
       <p>Click here to add ther first product</p>
       <a class="btn" href="/create/product">New Product</a>
-    </div> --}}
+    </div>
     {{/each}}
   </div>
 
