@@ -1,0 +1,25 @@
+
+    <main>
+      <h1>Attach a new accessory</h1>
+      <div class="form">
+        <h2>Rubiks Cube</h2>
+        <img class="cube" src="https://images-na.ssl-images-amazon.com/images/I/71WS9kb-JFL._SL1300_.jpg">
+        <form action='/attach/type/{{productId}}' method="POST">
+
+          {{#if hasTypes}}
+                    <label for="type">Accessories</label>
+          <select id="type" name="type">
+            {{#each types}}
+            <option value="{{_id}}">{{name}}</option>
+     
+            {{/each}}
+          </select>
+             {{else}}   
+           <h3 class="italic">This cube has all available accessories so far or there is no available at all...
+        </h3>
+          <input type="submit" value="Attach">
+        </form>
+  
+        <a class="btn" href="/">Back</a>
+      </div>
+    </main>
