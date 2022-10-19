@@ -3,26 +3,15 @@
             <h1>{{productName}}</h1>
             {{!-- <img class="cube" src="{{imageURL}}"> --}}
             <div class="details">
-                <p><span>Quantity:</span>{{quantity}}</p>
-                <p><span>Price:</span>{{price}}</p>
-                <p><span>Vendor:</span>{{vendor}}</p>
-                <p><span>Type:</span>{{productType}}</p>
-                <p><span>Description:</span>{{description}}</p>
+                <p><span><b>Quantity:</b></span> {{quantity}}</p>
+                <p><span><b>Price:</b></span> {{price}}</p>
+                <p><span><b>Vendor:</b></span> {{vendor}}</p>
+                <p><span><b>Type:</b></span> {{productType}}</p>
+                <p><span><b>Description:</b></span> {{description}}</p>
                 <a class="btn" href="/">Back</a>
             {{!-- <a class="btn" href="/attach/type/{{_id}}">Attatch Accessory</a> --}}
             </div>
-            <h2>Accessories</h2>
-            <div class="types">
-                {{#each types}}
-                <div class="{{imageURL}}" alt="{{name}}">
-                    <h3>{{name}}</h3>
-                    <p>{{description}}</p>
-                </div>
-                {{else}}
-           
-                <h3 class="italic">This cube has no accessories yet...</h3>
-                {{/each}}
-            </div>
+            
         </main>
 
 
