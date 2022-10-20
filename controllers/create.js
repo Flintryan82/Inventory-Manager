@@ -6,26 +6,29 @@ const Type = require("../models/Type");
 module.exports = {
 product:{
   get: function(req,res){
-        res.render("create.hbs");
+    let loggedIn = req.loggedIn;
+    
+        res.render("create.hbs",{loggedIn});
     },
     post: function(req,res){
         let body = req.body;
         // console.log(body);
     
-            new Product(body).save()
+            Product(body).save()
             .then((result)=>{
                 // console.log(result);
                 res.redirect("/");
             });
 
 
-    }   
+    },
 },
    
   
     type:{
         get: function(req,res){
-            res.render("createType.hbs")
+            let loggedIn = req.loggedIn;
+            res.render("createType.hbs",{loggedIn});
         },
         post: function(req,res){
             let body = req.body;

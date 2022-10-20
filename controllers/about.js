@@ -1,3 +1,4 @@
 module.exports = function(req,res){
-    res.render("about.hbs");
+    let loggedIn = req.loggedIn;
+    res.render("about.hbs",{loggedIn});
 };
