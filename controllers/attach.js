@@ -4,13 +4,15 @@ const Product = require("../models/Product");
 
 module.exports = {
     get: function(req,res){
+        let loggedIn = req.loggedIn;
         let productId = req.params.productId;
         Type.find({products:{$nin:[productId]}}).lean().then(types=>{
             let hasTypes = types.length>0?true:false;
             context = {
                 productId,
                 hasTypes,
-                types
+                types,
+                loggedIn
             };
         res.render("attatchType.hbs",context);
         });

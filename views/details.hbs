@@ -8,7 +8,17 @@
                 <p><span><b>Vendor:</b></span> {{vendor}}</p>
                 <p><span><b>Type:</b></span> {{productType}}</p>
                 <p><span><b>Description:</b></span> {{description}}</p>
-                <a class="btn" href="/">Back</a>
+
+
+
+   
+                {{!-- action='/create/product' method="POST" --}}
+                <form action="/product/delete">
+                        <a class="btn" href="/product/delete/:{{_id}}">Delete Product</a>    
+                </form>
+            <a class="btn" href="/product/edit/:{{_id}}">Edit Product</a>             
+            <a class="btn" href="/">Back Home</a>
+                {{!-- action='/create/product' method="POST" --}}
             {{!-- <a class="btn" href="/attach/type/{{_id}}">Attatch Accessory</a> --}}
             </div>
             

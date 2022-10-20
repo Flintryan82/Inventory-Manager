@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // const Type = require("./Type");
-
+const User = require("./User");
 
 const productSchema = new mongoose.Schema({   // THIS WORKS>>>>>>>>>>>>>>
     // _id:{type: String},
@@ -12,6 +12,7 @@ const productSchema = new mongoose.Schema({   // THIS WORKS>>>>>>>>>>>>>>
     description:{type: String, },
     // imageURL : {type: String,validate: validImage},
     // types: {type:mongoose.Schema.Types.ObjectId,ref: 'Type'}
+    creatorId: {type:mongoose.Schema.Types.ObjectId,ref: 'User'}
 });
 
 

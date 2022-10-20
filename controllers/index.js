@@ -6,5 +6,8 @@ module.exports = {
     signup: require("./signup"),
     create: require("./create"),
     attach:require("./attach"),
-    fourOhFour: require("./404")
+    fourOhFour: require("./404"),
+    edit: require("./edit"),
+    delete: require("./delete"),
+    user: require("./user")
 };

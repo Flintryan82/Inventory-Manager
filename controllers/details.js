@@ -3,6 +3,7 @@ const Type = require("../models/Type");
 
 
 module.exports = function(req,res){
+    let loggedIn = req.loggedIn;
     let productId = req.params;
     let iDstring = productId.productId;
     let idArr = iDstring.split("");
@@ -10,7 +11,11 @@ module.exports = function(req,res){
     let newId = idArr.join("");
 
 Product.findById({_id:`${newId}`}).lean().then((product)=>{
-       res.render("details.hbs",product); 
+    let context = {
+        ...product,
+        loggedIn
+    }
+       res.render("details.hbs",context); 
     //    console.log(Product.productName);
 });
 

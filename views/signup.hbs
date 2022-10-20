@@ -3,30 +3,24 @@
   <div class="fish" id="fish"></div>
   <div class="fish" id="fish2"></div>
 
-  <form id="waterform" method="post">
+  <form id="waterform" action="/user/signup" method="POST">
 
-    <div class="formgroup" id="name-form">
-      <label for="name">Employee Name*</label>
-      <input type="text" id="name" name="employeeName" />
-    </div>
+
 
     <div class="formgroup" id="name-form">
       <label for="name">Employee Username*</label>
-      <input type="text" id="name" name="username" />
+      <input type="text" id="username" name="username" />
     </div>
         <div class="formgroup" id="name-form">
       <label for="name">Employee Password*</label>
-      <input type="text" id="name" name="password" />
+      <input type="password" id="password" name="password" />
     </div>
         <div class="formgroup" id="name-form">
       <label for="name">Employee Repeat Password*</label>
-      <input type="text" id="name" name="repeatPassword" />
+      <input type="password" id="repeatPassword" name="repeatPassword" />
     </div>
     
-        <div class="formgroup" id="name-form">
-      <label for="name">Employee Email*</label>
-      <input type="text" id="name" name="email" />
-    </div>
+
 
 
     <input type="submit" value="Signup New Employee!" />
