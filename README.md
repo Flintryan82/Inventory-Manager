@@ -136,17 +136,17 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-[M.A](Michael Allen)
+* [M.A](Michael Allen)
 email:
 website
-[R.F](Ryan Flint)
+* [R.F](Ryan Flint)
 email:
 website
-[W.B](William Bermudez)
+* [W.B](William Bermudez)
 email:
 website:
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/Flintryan82/Inventory-Manager](https://github.com/Flintryan82/Inventory-Manager)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
