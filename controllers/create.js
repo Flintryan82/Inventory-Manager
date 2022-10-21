@@ -13,10 +13,15 @@ product:{
     post: function(req,res){
         let body = req.body;
         // console.log(body);
+        let user = req.user;
+        let newProduct = {
+            ...req.body,
+            creatorId:user.id
+        }
     
-            Product(body).save()
+           new Product(newProduct).save()
             .then((result)=>{
-                // console.log(result);
+               // console.log(result);
                 res.redirect("/");
             });
 
