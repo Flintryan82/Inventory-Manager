@@ -1,7 +1,7 @@
 const db = require("../config/database");
 const Type = require("../models/Type");
 const Product = require("../models/Product");
-
+     
 module.exports = {
     get: function(req,res){
         let loggedIn = req.loggedIn;

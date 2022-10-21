@@ -6,6 +6,7 @@ const jwt = require("jsonwebtoken");
 const secret = require("./config").jwtSecret;
 
 
+
 module.exports = (app) => {
     
     //TODO: Setup the view engine

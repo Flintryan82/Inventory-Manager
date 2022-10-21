@@ -8,6 +8,14 @@
 
 </head>
 <body>
+  {{#if loggedIn}}
+      <p><span><b>Logged in as : {{user.username}}</b></span></p>
+  {{else}}
+      {{!-- <p><a href="/user/signup">Signup</a> or <a href="/user/login">login</a></p> --}}
+  {{/if}}
+ 
+
+  
       <div class="container">
         <header>
             <ul>
@@ -23,6 +31,7 @@
                 {{/if}}
             </ul>
         </header>
+        
     {{{body}}}  
 
   <footer>Project MRW - Express Inventory Manager tRadEmaRkeD</footer>
