@@ -8,11 +8,11 @@ module.exports = (app) => {
     app.get("/create/product",controllers.create.product.get);
     app.post("/create/product",controllers.create.product.post);
 
-    app.get("/edit/product",controllers.create.product.get);
-    app.post("/edit/product",controllers.create.product.get);
+    app.get("/edit/product/:productId",controllers.edit.get);
+    app.post("/edit/product/:productId",controllers.edit.post);
 
-    app.get("/delete/product",controllers.create.product.get);
-    app.post('/delete/product',controllers.create.product.post);
+    app.get("/delete/product/:id",controllers.create.product.get);
+    app.post('/delete/product/:id',controllers.create.product.post);
 
     app.get("/create/type",controllers.create.type.get);
     app.post("/create/type",controllers.create.type.post);

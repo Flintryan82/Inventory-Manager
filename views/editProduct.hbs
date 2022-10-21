@@ -3,36 +3,36 @@
   <div class="fish" id="fish"></div>
   <div class="fish" id="fish2"></div>
 
-  <form id="waterform" action='/edit/product' method="POST">
+  <form id="waterform" action='/edit/product/:{{_id}}' method="POST">
 
     <div class="formgroup" id="product">
       <label for="name">Product Name*</label>
-      <input type="text" id="productName" name="productName" />
+      <input type="text" id="productName" name="productName" value="{{productName}}"/>
     </div>
 
     <div class="formgroup" id="productDiv">
       <label for="text">Product Type</label>
-      <input type="text" id="productType" name="productType" />
+      <input type="text" id="productType" name="productType" value="{{productType}}"/>
     </div>
 
     <div class="formgroup" id="amount">
       <label for="text">Quantity</label>
-      <input type="number" id="quantity" name="quantity" />
+      <input type="number" id="quantity" name="quantity" value="{{quantity}}"/>
     </div>
 
     <div class="formgroup" id="price">
       <label for="text">Price</label>
-      <input type="regex" id="price" name="price" />
+      <input type="regex" id="price" name="price" value="{{price}}"/>
     </div>
 
     <div class="formgroup" id="vendor">
       <label for="text">Vendor</label>
-      <input type="text" id="vendorName" name="vendor" />
+      <input type="text" id="vendorName" name="vendor" value="{{vendor}}"/>
     </div>
 
     <div class="formgroup" id="message-form">
       <label for="message">Product Description</label>
-      <textarea id="message" name="description"></textarea>
+      <textarea id="message" name="description">{{description}}</textarea>
     </div>
     <input type="submit" value="Edit Product" />
   </form>
