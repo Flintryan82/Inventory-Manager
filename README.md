@@ -26,7 +26,6 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -39,9 +38,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+Inventory Manager
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Looking to make tracking inventories on the backend a breeze? Fork a clone of our express inventory manager connected to your own personal mongo database for storing your own products. Product Uploads made simple,create, edit, delete, and dynamically render your items on your own backend tool
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -49,13 +49,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![Node][Node.js]][Next-url]
+* [![Express][Express]][React-url]
+* [![Handlebars][Handlebars]][Handlebars-url]
 * [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -65,32 +61,48 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get started simply, create a new folder on your desktop (name it anything you want), copy the link to the main branch for Inventory Manager "https://github.com/Flintryan82/Inventory-Manager", Open your new folder in vs code and perform a git clone on the url given. Once everything is cloned in you should be given a file named "Inventory-Manager"
+
+In a new terminal type "cd Inventory-Manager"(this should take you into the proper file destination in your terminal)
+In the Inventory-Manager directory, perform your npm install to download all the dependencies listed in the package.json.
+
+Once npm installs complete, your last task is to start up the server, simply type
+"npm start" into your terminal.
+
+This will launch your app on your own local server, files should be ready to be viewed in your local host on the port 5000. 
+
+in your search enginer type "https://localhost:5000"
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+You will need to install mongosh
+
+please review mongosh documentations to get a local database on your server for storing products. 
+
+mongoDBcompass
+
+configure mongodb files in program files 
+
+run mongod before sending and CRUD requests!
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone website
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+3. Change into proper directory
+  ```sh
+  cd Inventory-Manager
    ```
+4. Start Development Server
+  ```sh
+  npm start
+  ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,25 +111,16 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Inventory-Manager has a variety of uses. Pretend you are a mom and pop fighing shop that sells custom items. Unlike commercialized products your items wont be boxed, with a proper SKU number.
+To go around this problem we created the Express Inventory Manager in order to easily help users manage their small scale inventories in a simple to use manner. 
+
+Simply type the product information in a form, and send that product to your own personal database for storage. This information is kept so on your home page, you get to view all of your products along with their price, quantity, vendor, and descriptions etc. 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -151,7 +154,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+[M.A](Michael Allen)
+email:
+website
+[R.F](Ryan Flint)
+email:
+website
+[W.B](William Bermudez)
+email:
+website:
 
 Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
 
@@ -162,9 +173,9 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+* [M.A](Michael Allen)
+* [R.F](Ryan Flint)
+* [W.B](William Bermudez)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
