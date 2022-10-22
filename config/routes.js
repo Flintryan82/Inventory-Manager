@@ -17,6 +17,10 @@ module.exports = (app) => {
     app.get("/create/type",controllers.create.type.get);
     app.post("/create/type",controllers.create.type.post);
     app.get("/details/:productId",controllers.details); //give details about specific product
+   
+    app.post("/search/product",controllers.search);
+
+
     app.get("/attach/type/:productId",controllers.attach.get);
     app.post("/attach/type/:productId",controllers.attach.post);
 

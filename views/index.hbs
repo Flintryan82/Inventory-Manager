@@ -10,8 +10,9 @@
 {{/if}}
 
   <h1>Products</h1>
-  <form action="/product" method="GET">
-    <input type="text" id="searchInput" class="search" name="search" placeholder="Search...">
+  <form action="/search/product" method="post">
+  <form>
+    <input type="text" id="searchInput" class="search" name="search" placeholder="Search..." onkeyup="sendData(this)">
 
     <input type="submit" id="searchButton" value="search">
   </form>
@@ -41,9 +42,13 @@
 </main>
 
 <script>
-  let searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click",function(){
-let searchInput = document.getElementById("searchInput").value;
-console.log(searchInput);
-});
+  function sendData(e){
+    fetch('getProducts', {
+      method:'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({payload: e.value})
+    });
+  }
 </script>
+
+

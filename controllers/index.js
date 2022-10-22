@@ -9,5 +9,6 @@ module.exports = {
     fourOhFour: require("./404"),
     edit: require("./edit"),
     delete: require("./delete"),
-    user: require("./user")
+    user: require("./user"),
+    search: require("./search")
 };
