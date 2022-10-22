@@ -1,0 +1,54 @@
+<main>
+{{#if loggedIn}}
+{{!-- Show welcome user --}}
+<a id="various1" href="#target"></a>
+<div style="display: none;">
+ <div id="target">message to display in fancybox</div>
+</div>
+{{else}} 
+{{!-- nothing --}}
+{{/if}}
+
+  <h1>Products</h1>
+  {{!-- <form action="/search/product" method="post">
+  <form>
+    <input type="text" id="searchInput" class="search" name="search" placeholder="Search..." onkeyup="sendData(this)">
+
+    <input type="submit" id="searchButton" value="search">
+  </form> --}}
+  <div>
+
+    {{#each products}} 
+      <div class="cube" action="/product" method="GET">
+      <a href="/details/:{{_id}}"><p class="name">{{productName}}</p></a>
+      <p><span><b>Product Type:</b></span> {{productType}}</p>
+      <p><span><b>Quantity:</b></span> {{quantity}}</p>
+      <p><span><b>Product Price:</b></span> {{price}}</p>
+      <p><span><b>Vendor:</b></span> {{vendor}}</p>
+      {{!-- <p><span>Product description</span> {{description}}</p> --}}
+      {{!-- <p><span>Product id</span> {{_id}}</p> --}}
+      {{!-- <a class="btn" href="/details/{{_id}}">Details</a> --}}
+
+    </div>
+    {{else}}
+    <div class="cube">
+      <p class="name">NO PRODUCTS WERE FOUND</p>
+      <p>Click here to add ther first product</p>
+      <a class="btn" href="/create/product">New Product</a>
+    </div>
+    {{/each}}
+  </div>
+
+</main>
+
+<script>
+  function sendData(e){
+    fetch('getProducts', {
+      method:'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({payload: e.value})
+    });
+  }
+</script>
+
+

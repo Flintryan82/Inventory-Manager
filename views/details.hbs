@@ -1,0 +1,32 @@
+{{!-- THIS PAGE WILL BE USED FOR INDIVIDUAL PRODUCTS --}}
+        <main>
+            <h1>{{productName}}</h1>
+            {{!-- <img class="cube" src="{{imageURL}}"> --}}
+            <div class="details">
+                <p><span><b>Quantity:</b></span> {{quantity}}</p>
+                <p><span><b>Price:</b></span> {{price}}</p>
+                <p><span><b>Vendor:</b></span> {{vendor}}</p>
+                <p><span><b>Type:</b></span> {{productType}}</p>
+                <p><span><b>Description:</b></span> {{description}}</p>
+
+
+
+   
+                {{!-- action='/create/product' method="POST" --}}
+            
+                {{!-- action='/create/product' method="POST" --}}
+            {{!-- <a class="btn" href="/attach/type/{{_id}}">Attatch Accessory</a> --}}
+            {{#if loggedIn}}
+        <a class="btn" href="/delete/product/:{{_id}}">Delete Product</a>
+        <a class="btn" href="/edit/product/:{{_id}}">Edit Product</a>
+        <a class="btn" href="/">Back Home</a>
+ 
+        {{!-- If you are not logged in you cannot edit or delete.. --}}
+        {{else}}
+        <a class="btn" href="/">Back Home</a>
+        {{/if}}
+            </div>
+            
+        </main>
+
+

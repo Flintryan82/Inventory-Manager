@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+  <title>Inventory Management</title>
+  <link href="/css/site.css" type="text/css" rel="stylesheet">
+  <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.png' />
+
+</head>
+<body>
+  {{#if loggedIn}}
+      <p><span><b>Logged in as : {{user.username}}</b></span></p>
+  {{else}}
+      {{!-- <p><a href="/user/signup">Signup</a> or <a href="/user/login">login</a></p> --}}
+  {{/if}}
+ 
+
+  
+      <div class="container">
+        <header>
+            <ul>
+                <li><img class="logo" src="/images/logo.png"></li>
+                <li><a href="/">Inventory</a></li>
+                <li><a href="/about">About</a></li>
+                {{#if loggedIn}}
+                <li><a href="/create/product">Add a Product</a></li>
+                <li><a href="/user/logout">logout</a></li>   
+                {{else}}
+                <li><a href="/user/login">Login</a></li>
+                <li><a href="/user/signup">Signup</a></li>
+                {{/if}}
+            </ul>
+        </header>
+        
+    {{{body}}}  
+
+  <footer>Project MRW - Express Inventory Manager tRadEmaRkeD</footer>
+
+</body>
+</html>
