@@ -1,3 +1,8 @@
 module.exports = function(req,res){
-    res.render("404.hbs");
+    let loggedIn = req.loggedIn;
+    let context = {
+        loggedIn,
+        user:req.user
+    }
+    res.render("404.hbs",context);
 };

@@ -7,8 +7,11 @@ module.exports = {
 product:{
   get: function(req,res){
     let loggedIn = req.loggedIn;
-    
-        res.render("create.hbs",{loggedIn});
+        let context = {
+            loggedIn,
+            user:req.user
+        }
+        res.render("create.hbs",context);
     },
     post: function(req,res){
         let body = req.body;

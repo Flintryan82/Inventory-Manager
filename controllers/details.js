@@ -13,7 +13,8 @@ module.exports = function(req,res){
 Product.findById({_id:`${newId}`}).lean().then((product)=>{
     let context = {
         ...product,
-        loggedIn
+        loggedIn,
+        user:req.user
     }
        res.render("details.hbs",context); 
     //    console.log(Product.productName);

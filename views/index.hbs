@@ -1,9 +1,19 @@
 <main>
+{{#if loggedIn}}
+{{!-- Show welcome user --}}
+<a id="various1" href="#target"></a>
+<div style="display: none;">
+ <div id="target">message to display in fancybox</div>
+</div>
+{{else}} 
+{{!-- nothing --}}
+{{/if}}
+
   <h1>Products</h1>
   <form action="/product" method="GET">
-    <input type="text" class="search" name="search" placeholder="Search...">
+    <input type="text" id="searchInput" class="search" name="search" placeholder="Search...">
 
-    <input type="submit" value="search">
+    <input type="submit" id="searchButton" value="search">
   </form>
   <div>
 
@@ -29,3 +39,11 @@
   </div>
 
 </main>
+
+<script>
+  let searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click",function(){
+let searchInput = document.getElementById("searchInput").value;
+console.log(searchInput);
+});
+</script>

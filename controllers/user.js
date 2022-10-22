@@ -47,11 +47,20 @@ module.exports = {
     login:{
         get: function(req,res){
             let loggedIn = req.loggedIn;
-            res.render("login.hbs",{loggedIn})
+            let body = req.body;
+            // console.log(body);
+            // console.log("This is the body right above");
+            let username = body.username;
+            let context = {
+                loggedIn,
+                username,
+            }
+            res.render("login.hbs",context);
         },
         post: function(req,res){
             let body = req.body;
-            // console.log(body);
+            console.log(body);
+            console.log("This is the body right above");
             let username = body.username;
             let password = body.password;
             User.findOne({username}).lean().then((user)=>{

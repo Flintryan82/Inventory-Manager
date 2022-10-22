@@ -2,7 +2,7 @@
 const db = require("../config/database");
 const Product = require("../models/Product");
 const Type = require("../models/Type");
-
+ 
 module.exports = {
 
   get: function(req,res){
@@ -18,6 +18,7 @@ module.exports = {
             let context = {
                 loggedIn,
                 ...product,
+                user:req.user
             }
             res.render("deleteProduct.hbs", context);
         });

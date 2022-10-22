@@ -18,6 +18,7 @@ module.exports = {
             let context = {
                 loggedIn,
                 ...product,
+                user:req.user
             }
             res.render("editProduct.hbs", context);
         });
